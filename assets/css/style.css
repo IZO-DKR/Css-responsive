@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  user-select: none;
+}
+
+::selection {
+  background: yellowgreen;
+  color: red;
+  overflow: hidden;
+}
+
+:root {
+  --j: rgb(0, 0, 0);
+  --px: 10px;
+  --g: grey;
+}
+
+section,
+section > div {
+  display: flex;
+}
+
+main {
+  background: var(--g);
+}
+
+section {
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section div {
+  min-height: 60vh;
+}
+
+article {
+  flex: 1;
+  border: 1px solid black;
+}
+
+a {
+  color: white;
+}
+
+main > section:nth-child(2) {
+  display: inherit;
+  padding-top: 20vh;
+}
+@media screen and (orientation: portrait) {
+  header + section {
+    background: url(../img/v1.jpg) center center no-repeat fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  header + section {
+    background: url(../img/basketball.jpg) center center no-repeat fixed;
+    background-size: cover;
+  }
+}

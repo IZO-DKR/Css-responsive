@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      section {
+        width: 80%;
+        height: 500px;
+        background: grey;
+        margin: 10% auto;
+        display: flex;
+      }
+
+      article {
+        width: 33, 33%;
+        height: 500px;
+      }
+
+      section > article:first-child(2) {
+        background: yellow;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      section > article:first-child(2) {
+        background: blue;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      section > article:first-child(2) {
+        background: greenyellow;
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <article>Absolute</article>
+      <article></article>
+      <article></article>
+    </section>
+  </body>
+</html>
